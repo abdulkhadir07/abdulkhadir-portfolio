@@ -1,4 +1,4 @@
-// src/App.tsx
+import Footer from './components/Footer'
 import Hero from './sections/Hero'
 import About from './sections/About'
 import Experience from './sections/Experience'
@@ -15,6 +15,7 @@ function App() {
       <Projects />
       <Skills />
       <Contact />
+      <Footer />
     </main>
   )
 }
