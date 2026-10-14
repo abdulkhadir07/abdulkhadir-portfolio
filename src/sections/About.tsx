@@ -1,27 +1,42 @@
+import Reveal from '../components/Reveal'
+import SectionHeading from '../components/SectionHeading'
+import { highlights } from '../data/site'
+
 export default function About() {
   return (
-    <section id="about" className="mx-auto max-w-3xl px-6 py-20">
-      <h2 className="mb-6 text-3xl font-bold text-white">About Me</h2>
+    <section id="about" className="mx-auto max-w-6xl px-6 py-24">
+      <Reveal>
+        <SectionHeading
+          index="01 — About"
+          title="Building useful software with a strong engineering core."
+        />
+      </Reveal>
 
-      <div className="space-y-5 leading-relaxed text-zinc-300">
-        <p>
-          I&apos;m a sophomore computer science student at San Francisco State
-          University, focused on building a strong foundation in software
-          engineering, data structures, algorithms, and full-stack development.
-        </p>
+      <div className="mt-10 grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-start">
+        <Reveal className="space-y-5 text-base leading-relaxed text-body md:text-lg">
+          <p>
+            I&apos;m a computer science student at San Francisco State University, focused on
+            software engineering, data structures, algorithms, and full-stack development.
+          </p>
+          <p>
+            I enjoy turning ideas into usable products — especially work that combines backend
+            systems, clean user experiences, and real-world problem solving. I&apos;m currently
+            building a financial app.
+          </p>
+          <p>
+            I&apos;m looking for internships where I can contribute to meaningful products, ship
+            with care, and learn from experienced teams.
+          </p>
+        </Reveal>
 
-        <p>
-          I enjoy turning ideas into usable products, especially projects that
-          combine backend systems, clean user experiences, and real-world
-          problem solving. I&apos;m currently building Enum Inc., where I&apos;m
-          exploring how software can make social planning and coordination feel
-          more natural.
-        </p>
-
-        <p>
-          I&apos;m looking for opportunities to grow as a software engineer,
-          contribute to meaningful products, and learn from experienced teams.
-        </p>
+        <Reveal delayMs={120} className="grid grid-cols-2 gap-3">
+          {highlights.map((item) => (
+            <article key={item.label} className="surface rounded-2xl p-5">
+              <p className="font-display text-2xl font-bold text-heading">{item.value}</p>
+              <p className="mt-2 text-sm text-muted">{item.label}</p>
+            </article>
+          ))}
+        </Reveal>
       </div>
     </section>
   )

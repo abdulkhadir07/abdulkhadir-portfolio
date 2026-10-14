@@ -1,55 +1,45 @@
-const experiences = [
-  {
-    title: 'Computer Science Student',
-    organization: 'San Francisco State University',
-    date: '2025 - Present',
-    description:
-      'Building a foundation in software engineering, data structures, algorithms, object-oriented programming, and full-stack development.',
-  },
-  {
-    title: 'Fintech App Developer',
-    organization: 'Independent Project',
-    date: '2026 - Present',
-    description:
-      'Designing and building a fintech application for global transfers with a focus on secure workflows, backend reliability, and a simple user experience.',
-  },
-  {
-    title: 'Backend Developer',
-    organization: 'Campus Social App',
-    date: '2026',
-    description:
-      'Developed backend features for user profiles, invite posts, engagement requests, and chat flows using Java, Spring Boot, and REST API design.',
-  },
-]
+import Reveal from '../components/Reveal'
+import SectionHeading from '../components/SectionHeading'
+import { experiences } from '../data/site'
 
 export default function Experience() {
   return (
-    <section id="experience" className="mx-auto max-w-3xl px-6 py-20">
-      <h2 className="mb-8 text-3xl font-bold text-white">Experience</h2>
+    <section id="experience" className="mx-auto max-w-6xl px-6 py-24">
+      <Reveal>
+        <SectionHeading
+          index="02 — Experience"
+          title="Where I’ve built the habits."
+          description="Roles where I kept systems running and people supported, long before I wrote production code."
+        />
+      </Reveal>
 
-      <div className="space-y-6">
-        {experiences.map((experience) => (
-          <article
-            key={experience.title}
-            className="rounded-lg border border-zinc-800 bg-zinc-900/60 p-6"
-          >
-            <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
-              <div>
-                <h3 className="text-xl font-semibold text-white">
-                  {experience.title}
-                </h3>
-                <p className="mt-1 text-sm font-medium text-teal-400">
+      <div className="relative mt-12 space-y-6 before:absolute before:top-3 before:bottom-3 before:left-[11px] before:w-px before:bg-line md:before:left-[15px]">
+        {experiences.map((experience, index) => (
+          <Reveal key={experience.title} delayMs={index * 80}>
+            <article className="relative grid gap-4 pl-10 md:grid-cols-[180px_1fr] md:gap-8 md:pl-12">
+              <span className="absolute top-2 left-0 h-6 w-6 rounded-full border border-accent/40 bg-canvas shadow-[0_0_0_4px_color-mix(in_srgb,var(--color-accent)_14%,transparent)]">
+                <span className="absolute inset-1.5 rounded-full bg-accent" />
+              </span>
+              <p className="pt-1 text-sm font-medium tracking-wide text-subtle">
+                {experience.date}
+              </p>
+              <div className="surface rounded-2xl p-6 transition duration-300 hover:-translate-y-0.5">
+                <h3 className="text-xl font-semibold text-heading">{experience.title}</h3>
+                <p className="mt-1 text-sm font-medium text-accent">
                   {experience.organization}
+                  <span className="text-subtle"> · {experience.location}</span>
                 </p>
+                <ul className="mt-4 space-y-2 leading-relaxed text-body">
+                  {experience.bullets.map((bullet) => (
+                    <li key={bullet} className="flex gap-3">
+                      <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-
-              <p className="text-sm text-zinc-400">{experience.date}</p>
-            </div>
-
-            <p className="mt-4 leading-relaxed text-zinc-300">
-              {experience.description}
-            </p>
-          </article>
+            </article>
+          </Reveal>
         ))}
       </div>
     </section>
