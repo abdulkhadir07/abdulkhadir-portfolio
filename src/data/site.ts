@@ -1,6 +1,6 @@
 export const site = {
   name: 'Abdul Khadir Jallow',
-  role: 'Full-Stack Developer',
+  role: 'Software Engineering Student',
   school: 'San Francisco State University',
   location: 'San Francisco, CA',
   resumeHref: `${import.meta.env.BASE_URL}Abdul_Khadir_Jallow_Resume.pdf`,
