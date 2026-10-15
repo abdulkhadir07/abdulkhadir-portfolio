@@ -9,7 +9,7 @@ export default function Experience() {
         <SectionHeading
           index="02 — Experience"
           title="Where I’ve built the habits."
-          description="Roles where I kept systems running and people supported, long before I wrote production code."
+          description="Leadership training at SFSU, and the roles where I learned to keep systems running and people supported."
         />
       </Reveal>
 

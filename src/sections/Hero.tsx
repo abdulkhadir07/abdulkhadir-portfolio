@@ -20,8 +20,9 @@ export default function Hero() {
             {site.role} · {site.school}
           </p>
           <p className="mt-5 max-w-xl text-base leading-relaxed text-muted">
-            I build backend systems and clean product interfaces — from secure fintech workflows to
-            campus social tools that feel simple to use.
+            I build secure, reliable software end to end, from REST APIs and databases to the
+            interfaces people actually use. Right now that means a digital wallet for cross-border
+            payments and a safer way for SFSU students to meet.
           </p>
 
           <div className="mt-9 flex flex-wrap gap-4">

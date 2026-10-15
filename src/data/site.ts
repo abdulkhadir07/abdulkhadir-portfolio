@@ -29,6 +29,17 @@ export const highlights = [
 
 export const experiences = [
   {
+    title: 'Gator Leadership Circle',
+    organization: 'Career & Leadership Development, San Francisco State University',
+    location: 'San Francisco, CA',
+    date: 'Fall 2026',
+    bullets: [
+      'Completed a cohort-based leadership and career-readiness program for first- and second-year students.',
+      'Took part in workshops on leadership styles, communication, and resilience, alongside personal strengths assessments.',
+      'Built a network of peers and mentors across campus through community-building activities.',
+    ],
+  },
+  {
     title: 'IT Technician',
     organization: 'MSJ Bureau De Change Ltd',
     location: 'The Gambia',
