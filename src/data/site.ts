@@ -3,7 +3,7 @@ export const site = {
   role: 'Full-Stack Developer',
   school: 'San Francisco State University',
   location: 'San Francisco, CA',
-  resumeHref: '/Abdul_Khadir_Jallow_Resume.pdf',
+  resumeHref: `${import.meta.env.BASE_URL}Abdul_Khadir_Jallow_Resume.pdf`,
   resumeFileName: 'Abdul_Khadir_Jallow_Resume.pdf',
   email: 'abdulkhadirjallow743@gmail.com',
   phone: '628-289-5993',
