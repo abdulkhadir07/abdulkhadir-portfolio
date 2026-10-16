@@ -91,7 +91,10 @@ export const projects = [
     description:
       'Location-based invites and conversations without a follower system. Covers expiring invite posts, engagement requests, chat rooms after an accepted invite, discussion threads, and user ratings.',
     technologies: ['Java', 'Spring Boot', 'PostgreSQL', 'React', 'REST APIs'],
-    links: [{ label: 'GitHub', href: 'https://github.com/abdulkhadir07/open-circle' }],
+    links: [
+      { label: 'GitHub', href: 'https://github.com/abdulkhadir07/open-circle' },
+      { label: 'Live Demo', href: 'https://open-circle-puce.vercel.app/' },
+    ],
   },
 ]
 
