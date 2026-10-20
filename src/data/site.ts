@@ -16,6 +16,7 @@ export const navLinks = [
   { label: 'Experience', href: '#experience' },
   { label: 'Projects', href: '#projects' },
   { label: 'Skills', href: '#skills' },
+  { label: 'Coursework', href: '#coursework' },
   { label: 'Contact', href: '#contact' },
 ] as const
 
@@ -25,43 +26,6 @@ export const highlights = [
   { value: 'Java', label: 'Spring Boot & APIs' },
   { value: 'Open', label: 'To internships' },
 ]
-
-export type Technology = {
-  name: string
-  icon?: string
-}
-
-const technology = {
-  java: { name: 'Java', icon: 'openjdk' },
-  typescript: { name: 'TypeScript', icon: 'typescript' },
-  javascript: { name: 'JavaScript', icon: 'javascript' },
-  sql: { name: 'SQL' },
-  springBoot: { name: 'Spring Boot', icon: 'springboot' },
-  springSecurity: { name: 'Spring Security', icon: 'springsecurity' },
-  springData: { name: 'Spring Data JPA', icon: 'spring' },
-  hibernate: { name: 'Hibernate', icon: 'hibernate' },
-  react: { name: 'React', icon: 'react' },
-  nextjs: { name: 'Next.js', icon: 'nextdotjs' },
-  tailwind: { name: 'Tailwind CSS', icon: 'tailwindcss' },
-  prisma: { name: 'Prisma', icon: 'prisma' },
-  postgres: { name: 'PostgreSQL', icon: 'postgresql' },
-  neon: { name: 'Neon', icon: 'neon' },
-  jwt: { name: 'JWT', icon: 'jsonwebtokens' },
-  gemini: { name: 'Google Gemini', icon: 'googlegemini' },
-  awsS3: { name: 'AWS S3', icon: 'amazons3' },
-  brevo: { name: 'Brevo', icon: 'brevo' },
-  docker: { name: 'Docker', icon: 'docker' },
-  vercel: { name: 'Vercel', icon: 'vercel' },
-  railway: { name: 'Railway', icon: 'railway' },
-  netlify: { name: 'Netlify', icon: 'netlify' },
-  render: { name: 'Render', icon: 'render' },
-  flyway: { name: 'Flyway', icon: 'flyway' },
-  git: { name: 'Git', icon: 'git' },
-  githubActions: { name: 'GitHub Actions', icon: 'githubactions' },
-  maven: { name: 'Maven', icon: 'apachemaven' },
-  testcontainers: { name: 'Testcontainers', icon: 'testcontainers' },
-  spotbugs: { name: 'SpotBugs' },
-} satisfies Record<string, Technology>
 
 export const experiences = [
   {
@@ -100,42 +64,22 @@ export const experiences = [
 export const projects = [
   {
     title: 'Linkcore',
-    eyebrow: 'Fintech · Full-scale application',
+    eyebrow: 'Fintech · Full-stack',
     description:
-      'A digital wallet and remittance platform with OTP onboarding, wallet balances, live FX quotes, domestic and cross-border transfers, searchable transaction history, and printable receipts. Its Spring Boot API uses JWT authentication, an append-only ledger, and KYC validation for higher-value transfers.',
-    technologies: [
-      technology.java,
-      technology.springBoot,
-      technology.postgres,
-      technology.neon,
-      technology.jwt,
-      technology.javascript,
-      technology.tailwind,
-      technology.docker,
-      technology.render,
-      technology.netlify,
-    ],
+      'A digital wallet and remittance web app for sending money across borders, managing a wallet balance, depositing and withdrawing funds, and tracking transaction history. The Spring Boot API handles JWT auth, live transfer quotes, multi-currency FX conversion, and KYC checks on larger transfers.',
+    technologies: ['Java', 'Spring Boot', 'PostgreSQL', 'JWT', 'JavaScript', 'Tailwind CSS'],
     links: [
       { label: 'Live Demo', href: 'https://linkcoreweb.netlify.app' },
       { label: 'Frontend', href: 'https://github.com/abdulkhadir07/wallet-frontend' },
-      { label: 'API Repository', href: 'https://github.com/abdulkhadir07/digital-wallet-api' },
+      { label: 'Backend API', href: 'https://github.com/abdulkhadir07/digital-wallet-api' },
     ],
   },
   {
     title: 'OpenSFSU',
     eyebrow: 'Campus social · AI',
     description:
-      'A campus community platform that helps SFSU students find people to study, eat, and spend time with. Students create short-lived invites, join group chats, participate in Banter discussions, and build reputation, while Gemini supports drafting, safety screening, personal digests, matching explanations, and reply suggestions.',
-    technologies: [
-      technology.nextjs,
-      technology.typescript,
-      technology.tailwind,
-      technology.prisma,
-      technology.postgres,
-      technology.neon,
-      technology.gemini,
-      technology.vercel,
-    ],
+      'Helps SFSU students find people to study, eat, and hang out with today. Students post open invites, a group chat opens once the host accepts, and Google Gemini drafts invites and screens every post and message for safety.',
+    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Prisma', 'PostgreSQL', 'Gemini'],
     links: [
       { label: 'Live Demo', href: 'https://opensfsu.vercel.app' },
       { label: 'GitHub', href: 'https://github.com/abdulkhadir07/opensfsu' },
@@ -145,19 +89,8 @@ export const projects = [
     title: 'OpenCircle',
     eyebrow: 'Location-based social',
     description:
-      'A production-deployed social platform built around location-based discovery instead of followers. It supports verified accounts, local and global feeds, expiring invite posts, engagement workflows, real-time chat and notifications, persistent discussions, media uploads, ratings, leaderboards, and immediate account deletion.',
-    technologies: [
-      technology.java,
-      technology.springBoot,
-      technology.postgres,
-      technology.react,
-      technology.typescript,
-      technology.awsS3,
-      technology.brevo,
-      technology.docker,
-      technology.railway,
-      technology.vercel,
-    ],
+      'Location-based invites and conversations without a follower system. Covers expiring invite posts, engagement requests, chat rooms after an accepted invite, discussion threads, and user ratings.',
+    technologies: ['Java', 'Spring Boot', 'PostgreSQL', 'React', 'REST APIs, Gemini API, AWS S3, Vercel, Railway'],
     links: [
       { label: 'GitHub', href: 'https://github.com/abdulkhadir07/open-circle' },
       { label: 'Live Demo', href: 'https://open-circle-puce.vercel.app/' },
@@ -168,51 +101,40 @@ export const projects = [
 export const skillGroups = [
   {
     category: 'Programming Languages',
-    skills: [technology.java, technology.typescript, technology.javascript, technology.sql],
+    skills: ['Java', 'TypeScript', 'JavaScript', 'SQL'],
   },
   {
     category: 'Frameworks and Libraries',
     skills: [
-      technology.springBoot,
-      technology.springSecurity,
-      technology.springData,
-      technology.hibernate,
-      technology.react,
-      technology.nextjs,
-      technology.tailwind,
-      technology.prisma,
+      'Spring Boot',
+      'Spring Security',
+      'Spring Data JPA',
+      'Hibernate',
+      'React',
+      'Tailwind CSS',
     ],
   },
   {
-    category: 'Data, Cloud and Delivery',
-    skills: [
-      technology.postgres,
-      technology.neon,
-      technology.awsS3,
-      technology.docker,
-      technology.vercel,
-      technology.railway,
-      technology.netlify,
-      technology.render,
-    ],
+    category: 'Databases & Cloud',
+    skills: ['PostgreSQL', 'Flyway', 'Docker'],
   },
   {
-    category: 'Developer Tools and AI',
-    skills: [
-      technology.git,
-      technology.githubActions,
-      technology.maven,
-      technology.flyway,
-      technology.testcontainers,
-      technology.gemini,
-      technology.spotbugs,
-    ],
+    category: 'Developer Tools',
+    skills: ['Git', 'GitHub Actions', 'Maven', 'Testcontainers', 'SpotBugs'],
   },
+]
+
+export const coursework = [
+  { code: 'CSC 101', title: 'Introduction to Computing' },
+  { code: 'CSC 215', title: 'Intermediate Computer Programming' },
+  { code: 'CSC 220', title: 'Data Structures' },
 ]
 
 // The closing statement near the bottom of the page. Rewrite it in your own words.
 export const closingMessage = {
   eyebrow: 'What drives me',
   statement:
-    'The limits of technology are still being written, and every opportunity to learn is a chance to help shape what comes next.',
+    'I build software people can trust with what matters most to them: their money, their time, and their safety.',
+  detail:
+    'Every project I take on is held to that standard, from the first schema to the last pixel.',
 }
