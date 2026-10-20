@@ -1,6 +1,7 @@
 import Reveal from '../components/Reveal'
 import SectionHeading from '../components/SectionHeading'
 import { ArrowUpRightIcon } from '../components/Icons'
+import TechnologyBadge from '../components/TechnologyBadge'
 import { projects } from '../data/site'
 
 export default function Projects() {
@@ -9,8 +10,8 @@ export default function Projects() {
       <Reveal>
         <SectionHeading
           index="03 — Projects"
-          title="Selected projects"
-          description="Products that show how I build real systems while strengthening software engineering fundamentals."
+          title="Projects"
+          description="Full-scale software applications built around financial access, student success, community, and safety."
         />
       </Reveal>
 
@@ -26,12 +27,7 @@ export default function Projects() {
                 <p className="mt-4 max-w-2xl leading-relaxed text-body">{project.description}</p>
                 <div className="mt-6 flex flex-wrap gap-2">
                   {project.technologies.map((technology) => (
-                    <span
-                      key={technology}
-                      className="rounded-full border border-line bg-chip px-3 py-1 text-sm text-body"
-                    >
-                      {technology}
-                    </span>
+                    <TechnologyBadge key={technology.name} technology={technology} />
                   ))}
                 </div>
               </div>

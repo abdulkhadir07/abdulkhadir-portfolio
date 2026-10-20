@@ -1,5 +1,6 @@
 import Reveal from '../components/Reveal'
 import SectionHeading from '../components/SectionHeading'
+import TechnologyBadge from '../components/TechnologyBadge'
 import { skillGroups } from '../data/site'
 
 export default function Skills() {
@@ -8,8 +9,8 @@ export default function Skills() {
       <Reveal>
         <SectionHeading
           index="04 — Skills"
-          title="Tools I reach for"
-          description="Technologies I use to build backend systems, full-stack applications, and reliable development workflows."
+          title="Technical capabilities"
+          description="Languages, frameworks, infrastructure, model integrations, and engineering tools I use to design, build, test, and deploy full-scale software applications."
         />
       </Reveal>
 
@@ -20,12 +21,7 @@ export default function Skills() {
               <h3 className="text-lg font-semibold text-heading">{group.category}</h3>
               <div className="mt-5 flex flex-wrap gap-2">
                 {group.skills.map((skill) => (
-                  <span
-                    key={skill}
-                    className="rounded-full border border-line bg-canvas px-4 py-2 text-sm font-medium text-body"
-                  >
-                    {skill}
-                  </span>
+                  <TechnologyBadge key={skill.name} technology={skill} size="large" />
                 ))}
               </div>
             </article>

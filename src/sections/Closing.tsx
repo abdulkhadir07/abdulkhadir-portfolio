@@ -12,9 +12,6 @@ export default function Closing() {
           <p className="font-display mx-auto mt-6 max-w-4xl text-3xl leading-tight font-bold tracking-tight text-heading md:text-5xl">
             “{closingMessage.statement}”
           </p>
-          <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-muted md:text-lg">
-            {closingMessage.detail}
-          </p>
         </div>
       </Reveal>
     </section>

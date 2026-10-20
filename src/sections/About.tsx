@@ -8,24 +8,47 @@ export default function About() {
       <Reveal>
         <SectionHeading
           index="01 — About"
-          title="Building useful software with a strong engineering core."
+          title="Curiosity became the foundation for everything I build."
         />
       </Reveal>
 
       <div className="mt-10 grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-start">
         <Reveal className="space-y-5 text-base leading-relaxed text-body md:text-lg">
           <p>
-            I&apos;m a computer science student at San Francisco State University, focused on
-            software engineering, data structures, algorithms, and full-stack development.
+            I grew up in The Gambia, where access to advanced technology and technical resources
+            can be limited. That experience taught me to value every opportunity to learn, and it
+            continues to make me curious about how technology works behind the scenes and how far
+            it can take us.
           </p>
           <p>
-            I enjoy turning ideas into usable products — especially work that combines backend
-            systems, clean user experiences, and real-world problem solving. I&apos;m currently
-            building a financial app.
+            I chose computer science because I wanted to understand and build the systems I used,
+            not only consume them. AI strengthened that ambition. Human imagination gave us
+            airplanes, mobile phones, and the internet; I believe the next generation of ideas can
+            reach even further and create technology that makes everyday life better.
           </p>
           <p>
-            I&apos;m looking for internships where I can contribute to meaningful products, ship
-            with care, and learn from experienced teams.
+            My experience working in financial services gave me a practical understanding of money
+            movement and the gap between African financial systems and markets such as the United
+            States and Europe. It now informs Linkcore, the remittance platform I am building to
+            make cross-border financial access more connected and useful.
+          </p>
+          <p>
+            Linkcore was also the first major application I built from the ground up. Writing its
+            early code myself gave me the foundation to understand, review, and improve AI-assisted
+            code today. Seeing it function as a complete product showed me that ideas in my head
+            could become real software and gave me the confidence to keep building at a larger
+            scale.
+          </p>
+          <p>
+            I bring curiosity, persistence, attention to detail, reliability, and resilience to my
+            work. I am seeking an internship where I can learn how production software is designed,
+            shipped, and maintained while contributing to a team that is equally motivated to
+            create technology that improves people&apos;s lives.
+          </p>
+          <p>
+            Outside technology, I am passionate about football. Its discipline, teamwork, and drive
+            to improve reflect how I approach engineering: keep learning, respond to setbacks, and
+            work toward the next win.
           </p>
         </Reveal>
 

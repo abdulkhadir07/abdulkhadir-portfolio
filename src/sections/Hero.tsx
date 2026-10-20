@@ -20,9 +20,9 @@ export default function Hero() {
             {site.role} · {site.school}
           </p>
           <p className="mt-5 max-w-xl text-base leading-relaxed text-muted">
-            I build secure, reliable software end to end, from REST APIs and databases to the
-            interfaces people actually use. Right now that means a digital wallet for cross-border
-            payments and a safer way for SFSU students to meet.
+            I build full-scale software applications end to end, from system architecture and data
+            design to responsive interfaces and deployment. My work spans fintech, AI-enabled
+            experiences, and social platforms designed around safety and community.
           </p>
 
           <div className="mt-9 flex flex-wrap gap-4">

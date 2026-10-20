@@ -46,9 +46,9 @@ export default function Contact() {
       <Reveal>
         <SectionHeading
           align="center"
-          index="06 — Contact"
+          index="05 — Contact"
           title="Let’s build something useful."
-          description="I’m open to internships, collaborations, and conversations about backend systems and product engineering."
+          description="I’m open to internships, collaborations, and conversations about software engineering, AI product development, and creating useful applications."
         />
       </Reveal>
 
